@@ -1,4 +1,4 @@
-# Production-Ready In-Memory Pub/Sub System
+In-Memory Pub/Sub System
 
 This project is a high-performance, in-memory Publish/Subscribe system built in Python. It uses the **FastAPI** framework to provide a WebSocket endpoint for real-time messaging and a set of REST APIs for system management and observability.
 
@@ -135,3 +135,4 @@ The application is configured via environment variables, which can be set in the
 
 * `LOG_LEVEL`: The logging level (e.g., `DEBUG`, `INFO`, `WARNING`). Default: `INFO`.
 * `MAX_HISTORY_PER_TOPIC`: The number of messages to store in each topic's history buffer. Default: `50`.
+
