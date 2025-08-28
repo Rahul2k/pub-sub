@@ -1,0 +1,17 @@
+# in-memory-pubsub-python-prod/docker-compose.yml
+version: '3.8'
+
+services:
+  pubsub:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: pubsub-server-py:latest
+    container_name: pubsub_service
+    ports:
+      - "8000:8000"
+    environment:
+      # You can override configuration here
+      - LOG_LEVEL=DEBUG
+      - MAX_HISTORY_PER_TOPIC=100
+    restart: unless-stopped

@@ -1,0 +1,4 @@
+# in-memory-pubsub-python-prod/requirements.txt
+fastapi
+uvicorn[standard]
+pydantic-settings

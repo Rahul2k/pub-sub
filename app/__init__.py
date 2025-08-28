@@ -1,0 +1,1 @@
+# to initialize app as a package, allows import of app.main
