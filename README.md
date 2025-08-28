@@ -53,17 +53,19 @@ This is the easiest and most reliable way to run the service.
 ## Project Structure
 ```tree
 .
-└── pub-sub
-    ├── app
-    │   ├── __init__.py
-    │   ├── config.py
-    │   ├── main.py
-    │   ├── models.py
-    │   └── pubsub.py
-    ├── docker-compose.yml
-    ├── Dockerfile
-    ├── README.md
-    └── requirements.txt
+├── app
+│   ├── __init__.py
+│   ├── config.py
+│   ├── main.py
+│   ├── models.py
+│   ├── pubsub.py
+│   └── routes
+│       ├── service_api.py
+│       └── ws_api.py
+├── docker-compose.yml
+├── Dockerfile
+├── README.md
+└── requirements.txt
 ```
 
 ## Assumptions and Design Choices
@@ -135,5 +137,6 @@ The application is configured via environment variables, which can be set in the
 
 * `LOG_LEVEL`: The logging level (e.g., `DEBUG`, `INFO`, `WARNING`). Default: `INFO`.
 * `MAX_HISTORY_PER_TOPIC`: The number of messages to store in each topic's history buffer. Default: `50`.
+
 
 
